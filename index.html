@@ -25,29 +25,40 @@
     <div class="card1">
       <div class="text">
         <div class="header">
-          <h1>
+          <h1 id="header-texts">
             “ I’ve been interested in coding for a while but never taken the jump, until now. 
             I couldn’t recommend this course enough. I’m now in the job of my dreams and so 
             excited about the future. ”
           </h1>
+          <h1 id="header-texts" class="hidden">
+            “ If you want to lay the best foundation possible I’d recommend taking this course. 
+            The depth the instructors go into is incredible. I now feel so confident about 
+            starting up as a professional developer. ”
+          </h1>
         </div>
         <div class="autor-att">
-          <h4>Tanya Sinclair</h4>
-          <p>UX Engineer</p>
+          <h4 id="header-texts">Tanya Sinclair</h4>
+          <p id="header-texts">UX Engineer</p>
+
+          <h4 id="header-texts" class="hidden">John Tarkpor</h4>
+          <p id="header-texts" class="hidden">Junior Front-end Developer</p>
+
         </div>
       </div>
-      <div class="image">
-        <img src="images/image-tanya.jpg" alt="">
+      <div class="image-container">
 
-        <div class="swipe-btn">
-          <a href="#">
-            <img src="images/icon-prev.svg" class="swip-icons" alt="">
-
-          </a>
-          <a href="#">
-            <img src="images/icon-next.svg" class="swip-icons" alt="">
-            
-          </a>
+        <div class="image-slider">
+          <img src="images/image-tanya.jpg" alt="" id="first">
+          <img src="images/image-john.jpg" alt="" id="last">
+        </div>
+        
+      </div>
+      <div class="swipe-btn">
+        <div id="prev-btn" class="prev-btn">
+          <button><img src="images/icon-prev.svg" alt=""></button>
+        </div>
+        <div id="next-btn" class="next-btn">
+          <button><img src="images/icon-next.svg" alt=""></button>
         </div>
       </div>
     </div>
@@ -57,7 +68,6 @@
         “ If you want to lay the best foundation possible I’d recommend taking this course. 
         The depth the instructors go into is incredible. I now feel so confident about 
         starting up as a professional developer. ”
-
       </h1>
 
       <h4>
@@ -67,18 +77,14 @@
       </h4>
     </div>
 
-    
-
   </div>
-  
-
-  
-
-  
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  
+  <script src="swiper.js"></script>
+  
 </body>
 </html>

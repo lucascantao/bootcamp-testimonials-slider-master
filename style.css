@@ -18,6 +18,7 @@ body {
 }
 
 body .attribution {
+	display: none;
 	position: absolute;
 	top: 90%;
 }
@@ -60,6 +61,11 @@ body .attribution {
 .container .card1 .text .header h1{
 	font-size: 30px;
 	font-weight: 300;
+	transition: .5s;
+}
+
+.container .card1 .text .header h1.hidden {
+	display: none;
 }
 
 .container .card1 .text .autor-att {
@@ -72,9 +78,20 @@ body .attribution {
 
 .container .card1 .text .autor-att h4 {
 	font-size: 20px;
+	transition: .5s;
 }
 
-.container .card1 .image {
+.container .card1 .text .autor-att p {
+	transition: .5s;
+}
+
+.container .card1 .text .autor-att h4.hidden,
+.container .card1 .text .autor-att p.hidden{
+	display: none;
+	transition: .5s;
+}
+
+.container .card1 .image-container {
 	
 	position: absolute;
 	right: 0;
@@ -82,12 +99,17 @@ body .attribution {
 	width: 500px;
 
 	box-shadow: 0px 0px 70px #1115;
+	overflow: hidden;
+}
+
+.container .card1 .image-container .image-slider {
+	display: flex;
 	
 }
 
-.container .card1 .image .swipe-btn {
+.container .card1 .swipe-btn {
 	content: '';
-	background-color: #fff;
+	background-color: #eee;
 	position: absolute;
 	height: 60px;
 	width: 120px;
@@ -98,26 +120,38 @@ body .attribution {
 	justify-content: center;
 
 	top: 95%;
-	left: 10%;
+	right: 300px;
+
+	z-index: 10000;
+
+	cursor: pointer;
+
+	
 }
 
-.container .card1 .image .swipe-btn a {
-	height: 100%;
-	width: 100%;
+.container .card1 .swipe-btn .prev-btn,
+.container .card1 .swipe-btn .next-btn{
+	height: 60px;
+	width: 120px;
 	display: flex;
+	justify-content: center;
 	align-items: center;
 	
 }
 
-.container .card1 .image .swipe-btn a img {
-	height: 30px;
-	width: 30px;
-	margin: auto;
-}
+.container .card1 .swipe-btn .prev-btn button,
+.container .card1 .swipe-btn .next-btn button{
 
-.container .card1 .image img {
+	border: none;
 	height: 100%;
 	width: 100%;
+	border-radius: 25px;
+	cursor: pointer;
+
+}
+
+button.disabled {
+	color: #aaa;
 }
 
 .container .card2{
